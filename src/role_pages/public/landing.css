@@ -1,0 +1,95 @@
+
+
+@layer components {
+  
+  .lb-nav {
+    @apply sticky top-0 z-50 bg-amber-50/90 backdrop-blur-sm border-b border-amber-200
+           px-6 flex items-center justify-between;
+    height: 60px;
+  }
+
+  .lb-nav-logo {
+    @apply flex items-center gap-2;
+  }
+
+  .lb-nav-logo-text {
+    @apply font-bold text-lg text-amber-800 tracking-tight;
+  }
+
+  
+  .lb-btn-outline {
+    @apply px-4 py-2 rounded-full border border-amber-800 text-amber-800
+           bg-transparent text-sm font-semibold
+           hover:bg-amber-800 hover:text-white transition-colors cursor-pointer;
+  }
+
+  .lb-btn-solid {
+    @apply px-4 py-2 rounded-full border-none bg-amber-800 text-white
+           text-sm font-semibold hover:bg-amber-900 transition-colors cursor-pointer;
+  }
+
+  
+  .lb-hero {
+    @apply relative overflow-hidden border-b border-amber-200 px-6 py-16 sm:py-24 text-center;
+    background: linear-gradient(135deg, #fffbf2 0%, #fef3c7 55%, #fde68a 100%);
+  }
+
+  .lb-hero-badge {
+    @apply inline-block bg-amber-100 border border-amber-300 rounded-full
+           px-4 py-1 text-xs text-amber-800 font-semibold uppercase tracking-widest mb-5;
+  }
+
+  .lb-hero-h1 {
+    @apply text-4xl sm:text-5xl lg:text-6xl font-black text-amber-900 leading-tight mb-5;
+  }
+
+  .lb-hero-accent { @apply text-amber-500; }
+
+  .lb-hero-p {
+    @apply text-base sm:text-lg text-amber-800/80 leading-relaxed max-w-lg mx-auto mb-8;
+  }
+
+  
+  .lb-btn-hero {
+    @apply w-full sm:w-auto px-7 py-3 rounded-full bg-amber-800 text-white
+           font-bold text-base hover:bg-amber-900 transition-all
+           shadow-lg cursor-pointer;
+    box-shadow: 0 4px 14px rgba(146, 64, 14, .3);
+  }
+
+  .lb-btn-maps {
+    @apply w-full sm:w-auto inline-flex items-center justify-center gap-1.5
+           px-7 py-3 rounded-full border border-amber-800 text-amber-800
+           font-semibold text-base hover:bg-amber-800 hover:text-white
+           transition-colors no-underline;
+  }
+
+  
+  .lb-product-card {
+    @apply bg-white border border-amber-200 rounded-2xl px-3 py-5 text-center
+           shadow-sm hover:-translate-y-1 hover:shadow-md transition-all;
+  }
+
+  
+  .lb-btn-cta-primary {
+    @apply w-full sm:w-auto px-7 py-3 rounded-full bg-amber-100 text-amber-900
+           font-bold text-base hover:bg-white transition-colors cursor-pointer;
+  }
+
+  .lb-btn-cta-outline {
+    @apply w-full sm:w-auto px-7 py-3 rounded-full border text-base
+           font-semibold transition-colors cursor-pointer;
+    border-color: rgba(254, 243, 199, 0.8);
+    color: #fef3c7;
+  }
+  .lb-btn-cta-outline:hover {
+    background: rgba(254, 243, 199, 0.1);
+  }
+
+  
+  .lb-map-link {
+    @apply inline-flex items-center gap-1.5 text-amber-800 font-semibold text-sm
+           border-b border-amber-500 pb-px no-underline
+           hover:text-amber-900 transition-colors;
+  }
+}

@@ -1,0 +1,32 @@
+# Konfigurasi build & header Netlify.
+# Aturan SPA redirect tetap di public/_redirects (/* -> /index.html 200).
+
+[build]
+  command = "npm run build"
+  publish = "dist"
+  functions = "netlify/functions"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# `netlify dev`: jalankan Vite + proxy Netlify Functions di satu origin (http://localhost:8888).
+# framework="#custom" mencegah Netlify menjalankan instance Vite-nya sendiri (yang
+# bentrok dengan `command` dan membuat index.html salah diproses sebagai JS).
+[dev]
+  command     = "npm run dev"
+  targetPort  = 5173
+  port        = 8888
+  framework   = "#custom"
+  autoLaunch  = false
+
+# Aset ber-hash (nama file fingerprint) → aman di-cache selamanya.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# HTML entry jangan di-cache agar deploy baru langsung aktif.
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"

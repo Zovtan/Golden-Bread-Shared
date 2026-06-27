@@ -1,0 +1,61 @@
+
+
+@layer components {
+  
+  .auth-deco-panel {
+    @apply hidden lg:flex lg:w-1/2 flex-shrink-0 flex-col items-center justify-center gap-6
+           bg-amber-50 border-r border-amber-200 relative overflow-hidden;
+    background-image:
+      repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 18px,
+        rgba(146, 64, 14, 0.035) 18px,
+        rgba(146, 64, 14, 0.035) 19px
+      );
+  }
+
+  
+  .auth-form-panel {
+    @apply flex-1 bg-white overflow-y-auto flex flex-col;
+  }
+
+  
+  .auth-alert-error {
+    @apply mb-5 px-3 py-2.5 bg-red-50 border border-red-200 rounded text-sm text-red-600;
+  }
+
+  .auth-alert-success {
+    @apply mb-5 px-3 py-2.5 bg-green-50 border border-green-200 rounded text-sm text-green-700;
+  }
+
+  
+  .auth-btn-submit {
+    @apply w-full bg-amber-800 hover:bg-amber-900 disabled:opacity-60
+           disabled:cursor-not-allowed text-white font-semibold py-3
+           rounded-full transition-colors text-sm;
+  }
+
+  
+  .auth-btn-secondary {
+    @apply w-full bg-transparent border border-amber-300 hover:border-amber-600
+           disabled:opacity-50 disabled:cursor-not-allowed
+           text-amber-800 font-semibold py-3 rounded-full transition-colors text-sm;
+  }
+
+  
+  .auth-link-btn {
+    @apply bg-transparent border-none p-0 cursor-pointer font-[inherit]
+           text-amber-700 underline underline-offset-2 hover:text-amber-900 transition-colors;
+  }
+
+  
+  .auth-input {
+    @apply w-full border border-amber-900 rounded-lg px-3 py-3 text-[0.9375rem] bg-white
+           focus:outline-none focus:border-amber-500 transition-colors;
+  }
+  .auth-input-err {
+    @apply w-full border border-red-400 rounded-lg px-3 py-3 text-[0.9375rem] bg-white
+           focus:outline-none focus:border-red-500 transition-colors;
+  }
+}

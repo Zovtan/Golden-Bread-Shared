@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@import "./auth/auth.css";
+@import "./role_pages/public/landing.css";
+
+@layer base {
+  body { @apply m-0; }
+  #root { @apply w-full max-w-full min-h-screen; }
+  h1, h2 { @apply m-0; }
+}
